@@ -1,5 +1,5 @@
 name: moizy_ui
-description: A new Flutter package project.
+description: UI & utils package for moizy projects.
 version: 0.0.1
 homepage: https://moizy.dani.work
 
@@ -10,6 +10,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  shimmer: ^2.0.0
+
+  # Package for handle request permission
+  permission_handler: ^9.2.0
+
+  # Directory and files System handler
+  path_provider: ^2.0.11
 
 dev_dependencies:
   flutter_test:

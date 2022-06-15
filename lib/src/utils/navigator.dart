@@ -29,3 +29,7 @@ go(context, {to, String? transition}) {
     );
   }
 }
+
+goNamed(context, path) {
+  return Navigator.pushNamed(context, path);
+}
