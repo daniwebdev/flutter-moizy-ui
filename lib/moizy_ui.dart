@@ -1,6 +1,6 @@
 library moizy_ui;
 
-export 'src/utils/buttons.dart' show ButtonPrimary;
+export 'src/widgets/buttons.dart' show MoizyButton;
 export 'src/utils/colors.dart';
 export 'src/utils/custom_scroll_behavior.dart';
 export 'src/utils/dialog.dart';

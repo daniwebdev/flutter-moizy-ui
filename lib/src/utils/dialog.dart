@@ -165,7 +165,7 @@ showDialogBottomSheet(
             ),
             const SizedBox(height: 20),
             if (onConfirm != null)
-              ButtonPrimary(
+              MoizyButton.primary(
                 text: buttonText,
                 onPressed: () {
                   onConfirm();
@@ -173,7 +173,7 @@ showDialogBottomSheet(
                 },
               )
             else
-              ButtonPrimary(
+              MoizyButton.primary(
                 text: "OK",
                 onPressed: () {
                   Navigator.pop(context);
