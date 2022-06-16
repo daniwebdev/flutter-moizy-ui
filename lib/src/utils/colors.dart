@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 // Color classes
 class MoizyColors {
 
-  static const Color primary = const MaterialColor(
+  static const Color primary = MaterialColor(
     0xFF536DFE,
     <int, Color>{
        50: Color(0xFFEAEDFF),

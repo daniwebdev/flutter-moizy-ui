@@ -6,7 +6,7 @@ defaultTheme() {
     fontFamily: 'Poppins',
     splashColor: Colors.grey,
     backgroundColor: const Color.fromARGB(255, 245, 245, 245),
-    iconTheme: IconThemeData(color: MoizyColors.primary),
+    iconTheme: const IconThemeData(color: MoizyColors.primary),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       selectedItemColor: MoizyColors.purple.withBlue(255),
       unselectedItemColor: Colors.black,

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:moizy_ui/moizy_ui.dart';
-
 class PopupItemIcon extends StatelessWidget {
   final IconData icon;
   final String text;

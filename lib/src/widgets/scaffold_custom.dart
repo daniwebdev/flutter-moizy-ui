@@ -54,7 +54,7 @@ class TextButtonPrimary extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: onPressed,
-      child: Text(text, style: TextStyle(color: MoizyColors.primary)),
+      child: Text(text, style: const TextStyle(color: MoizyColors.primary)),
     );
   }
 }

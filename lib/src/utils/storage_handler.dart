@@ -1,18 +1,15 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:path_provider/path_provider.dart';
-import 'package:permission_handler/permission_handler.dart';
 
 class StorageHandler {
   Directory? _dir;
-  String? _path;
 
   static StorageHandler? _instance;
 
   StorageHandler._() {
     getDirectory().then((Directory dir) {
       _dir = dir;
-      _path = dir.path;
     });
   }
 
@@ -22,7 +19,6 @@ class StorageHandler {
   }
 
   void setPath(String path) {
-    instance._path = path;
   }
 
   Future<Directory> getDirectory() async {
