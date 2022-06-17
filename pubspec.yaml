@@ -15,6 +15,8 @@ dependencies:
   # Package for handle request permission
   permission_handler: ^9.2.0
 
+  shared_preferences: ^2.0.15
+
   # Directory and files System handler
   path_provider: ^2.0.11
 

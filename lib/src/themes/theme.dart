@@ -1,5 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:moizy_ui/moizy_ui.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+/// MoizyThemeChanger
+class MoizyTheme extends ChangeNotifier {
+  String? _selectedThemeIndex;
+  String? defaultTheme;
+
+  Map<String, MoizyThemeData> themes;
+
+  MoizyTheme({required this.themes, required this.defaultTheme});
+
+  get getTheme {
+    return themes[_selectedThemeIndex ?? defaultTheme];
+  }
+
+  set setTheme(int index) {
+    SharedPreferences.getInstance().then((prefs) {
+      _selectedThemeIndex = index;
+
+      prefs.setInt('selectedTheme', index);
+
+      notifyListeners();
+    });
+  }
+}
 
 defaultTheme() {
   return ThemeData(

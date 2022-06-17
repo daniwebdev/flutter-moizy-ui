@@ -10,7 +10,8 @@ export 'src/utils/storage_handler.dart';
 
 
 /* Theme */
-export 'src/themes/theme.dart' show defaultTheme;
+export 'src/themes/theme.dart' show defaultTheme, MoizyTheme;
+export 'src/themes/theme_data.dart' show MoizyThemeData;
 
 
 /* Widgets */
