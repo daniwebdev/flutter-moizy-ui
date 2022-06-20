@@ -11,15 +11,15 @@ class MoizyTheme extends ChangeNotifier {
 
   MoizyTheme({required this.themes, required this.defaultTheme});
 
-  get getTheme {
+  MoizyThemeData? get getTheme {
     return themes[_selectedThemeIndex ?? defaultTheme];
   }
 
-  set setTheme(int index) {
+  set setTheme(String index) {
     SharedPreferences.getInstance().then((prefs) {
       _selectedThemeIndex = index;
 
-      prefs.setInt('selectedTheme', index);
+      prefs.setString('selectedTheme', index);
 
       notifyListeners();
     });

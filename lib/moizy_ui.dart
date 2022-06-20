@@ -25,3 +25,4 @@ export './src/widgets/shimmer_widget.dart' show ShimmerWidget;
 export './src/widgets/transaction_item.dart' show TransactionItemShimmer,TransactionItemWidget;
 export './src/widgets/input_auth.dart' show InputAuth,AuthActionButton,DividerAuth;
 export './src/widgets/list_custom.dart' show ListItemCustom, ColumnListContainer;
+export './src/widgets/passcode_widget.dart' show PassCodeWidget;

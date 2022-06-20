@@ -12,6 +12,8 @@ dependencies:
     sdk: flutter
   shimmer: ^2.0.0
 
+  provider: any
+
   # Package for handle request permission
   permission_handler: ^9.2.0
 
