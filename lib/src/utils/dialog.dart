@@ -42,7 +42,9 @@ showAlertDialog(
                         ),
                         Text(
                           content ?? '',
-                          style: Theme.of(context).textTheme.bodyText1,
+                          style: Theme.of(context).textTheme.headline4?.copyWith(
+                            fontWeight: FontWeight.normal
+                          ),
                         )
                       ]),
                     ),
