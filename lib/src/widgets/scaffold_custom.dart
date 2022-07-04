@@ -7,12 +7,14 @@ class ScaffoldCustom extends StatelessWidget {
   final List<Widget>? actions;
   final IconData? backButtonIcon;
   final Function? onBack;
+  final Widget? floatingActionButton;
 
   const ScaffoldCustom({
     Key? key,
     this.onBack,
     this.body,
     this.title,
+    this.floatingActionButton,
     this.actions,
     this.backButtonIcon,
   }) : super(key: key);
@@ -26,6 +28,7 @@ class ScaffoldCustom extends StatelessWidget {
       },
       child: Scaffold(
         backgroundColor: Theme.of(context).backgroundColor,
+        floatingActionButton: floatingActionButton,
         appBar: AppBar(
           title: Text(title ?? ''),
           leading: backButtonIcon != null

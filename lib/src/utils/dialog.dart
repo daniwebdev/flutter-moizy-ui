@@ -42,9 +42,7 @@ showAlertDialog(
                         ),
                         Text(
                           content ?? '',
-                          style: Theme.of(context).textTheme.headline4?.copyWith(
-                            fontWeight: FontWeight.normal
-                          ),
+                          style: Theme.of(context).textTheme.headline4?.copyWith(fontWeight: FontWeight.normal),
                         )
                       ]),
                     ),
@@ -196,7 +194,10 @@ showDialogBottomSheet(
 showStackError(context, {textBody}) {
   showDialogBottomSheet(
     context,
-    image: Image.asset('assets/img/remove.png', width: 100,),
+    image: Image.asset(
+      'assets/img/remove.png',
+      width: 100,
+    ),
     height: 300,
     buttonText: "OK",
     textBody: textBody,

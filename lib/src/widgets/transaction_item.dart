@@ -22,7 +22,6 @@ class TransactionItemWidget extends StatelessWidget {
     var textTheme = Theme.of(context).textTheme;
 
     return ListItemCustom(
-      isLast:  isLastItem,
       padding: const EdgeInsets.all(10),
       child: Row(
         children: [
