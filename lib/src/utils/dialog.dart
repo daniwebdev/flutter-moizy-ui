@@ -9,6 +9,7 @@ showAlertDialog(
   Function(BuildContext)? onCancel,
   String okText = 'OK',
   String cancelText = 'Cancel',
+  bool showCancelButton: true,
 }) {
   showDialog(
     context: context,
@@ -35,34 +36,42 @@ showAlertDialog(
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.all(10),
-                      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                        Text(
-                          title,
-                          style: Theme.of(context).textTheme.headline4,
-                        ),
-                        Text(
-                          content ?? '',
-                          style: Theme.of(context).textTheme.headline4?.copyWith(fontWeight: FontWeight.normal),
-                        )
-                      ]),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            title,
+                            style: Theme.of(context).textTheme.headline4,
+                          ),
+                          Expanded(
+                            child: SingleChildScrollView(
+                              child: Text(
+                                content ?? '',
+                                style: Theme.of(context).textTheme.headline4?.copyWith(fontWeight: FontWeight.normal),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      TextButton(
-                        onPressed: () {
-                          if (onCancel != null) {
-                            onCancel.call(c);
-                          } else {
-                            Navigator.pop(c);
-                          }
-                        },
-                        child: Text(
-                          cancelText,
-                          style: Theme.of(context).textTheme.headline5,
+                      if(showCancelButton)
+                        TextButton(
+                          onPressed: () {
+                            if (onCancel != null) {
+                              onCancel.call(c);
+                            } else {
+                              Navigator.pop(c);
+                            }
+                          },
+                          child: Text(
+                            cancelText,
+                            style: Theme.of(context).textTheme.headline5,
+                          ),
                         ),
-                      ),
                       const SizedBox(
                         width: 20,
                       ),
@@ -88,6 +97,8 @@ showAlertDialog(
   );
 }
 
+/// Showing block screen usually used for loading data to server
+/// 
 showLoadingBlocked(BuildContext context, {String? message, required Future<void> Function(BuildContext) next}) {
   next(context);
 

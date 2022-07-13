@@ -39,6 +39,16 @@ defaultTheme() {
         fontSize: 12,
       ),
     ),
+    tabBarTheme: TabBarTheme(
+      labelColor: Colors.pink[800],
+      labelStyle: TextStyle(color: Colors.pink[800]), // color for text
+      indicator: UnderlineTabIndicator(
+        // color for indicator (underline)
+        borderSide: BorderSide(
+          color: Colors.pink[800]!,
+        ),
+      ),
+    ),
     cardTheme: const CardTheme(
       elevation: 0,
       color: Colors.white,
