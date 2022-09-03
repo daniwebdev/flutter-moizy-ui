@@ -47,7 +47,7 @@ showAlertDialog(
                             child: SingleChildScrollView(
                               child: Text(
                                 content ?? '',
-                                style: Theme.of(context).textTheme.headline4?.copyWith(fontWeight: FontWeight.normal),
+                                style: Theme.of(context).textTheme.headline5?.copyWith(fontWeight: FontWeight.normal),
                               ),
                             ),
                           )

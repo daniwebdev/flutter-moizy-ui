@@ -25,16 +25,16 @@ class PopupItemIcon extends StatelessWidget {
   }
 }
 
-class MoizyPopupMenuButton extends StatelessWidget {
-  final List<MoizyPopupMenuItem> items;
-  final Function(String) onSelected;
+class MoizyPopupMenuButton<A> extends StatelessWidget {
+  final List<MoizyPopupMenuItem<A>> items;
+  final Function(A) onSelected;
   final Widget? child;
 
   const MoizyPopupMenuButton({Key? key, this.child, required this.items, required this.onSelected}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<String>(
+    return PopupMenuButton<A>(
       elevation: 2,
       shape: RoundedRectangleBorder(
         side: BorderSide(color: Colors.grey[100]!),
@@ -61,10 +61,10 @@ class MoizyPopupMenuButton extends StatelessWidget {
   }
 }
 
-class MoizyPopupMenuItem {
+class MoizyPopupMenuItem<A> {
   final IconData icon;
   final String text;
-  final String value;
+  final A value;
   final Color color;
 
   MoizyPopupMenuItem({required this.icon, required this.text, required this.value, required this.color});

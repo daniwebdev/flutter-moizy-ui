@@ -7,6 +7,7 @@ class InputAuth extends StatelessWidget {
   final Widget? suffixIcon;
   final Widget? prefixIcon;
   final bool? obscureText;
+  final String? Function(String?)? validator;
   final TextInputType? keyboardType;
   final TextEditingController? controller;
 
@@ -17,19 +18,15 @@ class InputAuth extends StatelessWidget {
     this.suffixIcon,
     this.keyboardType,
     this.label,
+    this.validator,
     this.hint,
     this.controller,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      // padding: const EdgeInsets.all(15),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: TextFormField(
+    return TextFormField(
+        validator: validator,
         controller: controller,
         obscureText: obscureText ?? false,
         obscuringCharacter: '*',
@@ -54,8 +51,7 @@ class InputAuth extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
+      );
   }
 }
 
